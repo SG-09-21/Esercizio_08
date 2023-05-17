@@ -1,0 +1,46 @@
+.button-elimina{
+	background:none;
+	border:none;
+}
+
+.popup-cancellazione {
+	text-align:center;
+  	background-color: #ECEFF1;
+  	border-style:outset;
+  	border-radius:1.0em;
+  	box-shadow:10px 10px 5px #dedede;
+  	display: none;
+  	padding: 20px;
+  	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.button-abbandona {
+  	background-color: #78909C;
+  	border-style: inset;
+  	border-radius:0.5em;
+  	color: white;
+  	cursor: pointer;
+  	font-size: 14px;
+  	padding: 10px;
+}
+
+.button-conferma {
+  	background-color: #2979FF;
+  	border-style: inset;
+  	border-radius:0.5em;
+  	color: white;
+  	cursor: pointer;
+  	font-size: 14px;
+  	padding: 10px;
+}
+
+.rosso{
+	color: red;
+}
+
+.verde{
+	color: green;
+}

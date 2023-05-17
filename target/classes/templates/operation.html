@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Form Operazione</title>
+<link th:href="@{operation.css}" rel="stylesheet">
+</head>
+<body>
+	<form method="POST" th:object="${bilancio}">
+		<label class="label-width">Data:</label> 
+		<input type="date" th:field="*{data}" required> 
+		<br> 
+		<label class="label-width">Descrizione:</label>
+		<input type="text" th:field="*{descrizione}" required>
+		<br> 
+		<label class="label-width">Importo:</label> 
+		<input type="number" step="any" th:field="*{importo}" required> 
+		<br> 
+		<label class="label-width">Tipologia:</label>
+		<select th:field="*{tipologia}" required>
+			<option value="deposito">Deposito</option>
+			<option value="prelievo">Prelievo</option>
+		</select> 
+		<br> 
+		<input type="submit" th:value="Registra">
+	</form>
+</body>
+</html>

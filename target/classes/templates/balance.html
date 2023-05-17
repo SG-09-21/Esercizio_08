@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Conto Bancario</title>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script th:src="@{balance.js}"></script>
+<link th:href="@{balance.css}" rel="stylesheet">
+</head>
+<body>
+<a th:href="@{/operation}"> Nuova operazione</a>
+<hr>
+<table>
+	<tr th:each="p: ${bilancio}">
+	<td th:text="${p.id}"></td>
+	<td th:text="${p.data}"></td>
+	<td th:text="${p.descrizione}"></td>
+	<td th:text="${p.importo}"></td>
+	<td th:text="${p.tipologia}"></td>
+	<td>
+		<!-- <a th:href="@{cancella(id=${p.id})}">Elimina</a> -->
+		<button class="button-elimina" id="elimina" th:value="${p.id} + '@' + ${p.descrizione}">Elimina</button>
+		
+	</td>
+</table>
+	<br>
+	<p th:text="${estrattoConto}" th:class="${estratto<=0}? 'verde' : 'rosso'"></p>
+
+</body>
+</html>
